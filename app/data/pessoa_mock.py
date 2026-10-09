@@ -3,7 +3,7 @@ PESSOAS = [
         "id": 1,
         "nome": "Debora Miranda",
         "email": "debora.leitor@bairro.com",
-        "perfil": "admin",
+        "perfil": "bibliotecario",
         "senha": "1234",
     },
     {
