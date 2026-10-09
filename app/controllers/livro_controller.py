@@ -28,3 +28,10 @@ class LivroController:
             for livro in self._livros
             if not livro.mostrar_emprestado()
         ]
+
+    def buscar_livro_por_id(self, id):
+        for livro in self._livros:
+            if livro.mostrar_id() == id:
+                return self._para_dicionario(livro)
+
+        return None
