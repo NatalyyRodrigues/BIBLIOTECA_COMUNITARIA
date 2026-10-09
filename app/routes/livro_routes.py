@@ -1,8 +1,11 @@
 from fastapi import APIRouter, HTTPException
 from app.controllers.livro_controller import LivroController
+from app.models.livro import carregar_livros
 
 router = APIRouter()
-controller = LivroController()
+
+livros = carregar_livros()
+controller = LivroController(livros)
 
 @router.get("/api/livros")
 def listar_livros():
