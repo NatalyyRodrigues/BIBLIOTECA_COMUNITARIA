@@ -1,8 +1,11 @@
 from app.models.livro import carregar_livros
 
 class LivroController:
-    def __init__(self):
-        self._livros = carregar_livros()
+    def __init__(self, livros=None):
+        if livros is None:
+            livros = carregar_livros()
+
+        self._livros = livros
 
     def _para_dicionario(self, livro):
         return {
