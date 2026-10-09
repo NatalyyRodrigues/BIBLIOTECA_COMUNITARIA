@@ -21,3 +21,10 @@ class LivroController:
             resultado.append(dicionario)
 
         return resultado
+
+    def listar_disponiveis(self):
+        return [
+            self._para_dicionario(livro)
+            for livro in self._livros
+            if not livro.mostrar_emprestado()
+        ]

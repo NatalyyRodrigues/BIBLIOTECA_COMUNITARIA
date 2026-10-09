@@ -7,3 +7,7 @@ controller = LivroController()
 @router.get("/api/livros")
 def listar_livros():
     return controller.listar_livros()
+
+@router.get("/api/livros/disponiveis")
+def listar_disponiveis():
+    return controller.listar_disponiveis()
